@@ -218,6 +218,16 @@ acme.sh --install-cert -d example.com \
 --reloadcmd     "service apache2 force-reload"
 ```
 
+centos 
+
+```bash
+acme.sh --install-cert -d example.com \
+--cert-file      /path/to/certfile/in/apache/cert.pem  \
+--key-file       /path/to/keyfile/in/apache/key.pem  \
+--fullchain-file /path/to/fullchain/certfile/apache/fullchain.pem \
+--reloadcmd     "service httpd force-reload"
+```
+
 **Nginx** example:
 ```bash
 acme.sh --install-cert -d example.com \
